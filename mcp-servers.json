@@ -199,6 +199,59 @@
                     "is_latest": true
                 }
             }
+        },
+        {
+            "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+            "name": "Context7",
+            "description": "Context7 MCP Server provides up-to-date, version-specific documentation and code examples for libraries and frameworks. Enables LLMs to access current library documentation, resolving generic library names to Context7-compatible IDs and fetching comprehensive docs to eliminate outdated code generation.",
+            "status": "active",
+            "repository": {
+                "url": "https://github.com/upstash/context7",
+                "source": "github"
+            },
+            "version": "1.0.17",
+            "packages": [
+                {
+                    "registry_type": "npm",
+                    "registry_base_url": "https://registry.npmjs.org",
+                    "identifier": "@upstash/context7-mcp",
+                    "version": "1.0.17",
+                    "transport": {
+                        "type": "stdio"
+                    },
+                    "package_arguments": [
+                        {
+                            "type": "named",
+                            "name": "--api-key",
+                            "value": "{CONTEXT7_API_KEY}",
+                            "description": "Context7 API Key for higher rate limits (optional)",
+                            "is_required": false
+                        }
+                    ]
+                }
+            ],
+            "remotes": [
+                {
+                    "transport_type": "streamable-http",
+                    "url": "https://mcp.context7.com/mcp",
+                    "headers": [
+                        {
+                            "name": "CONTEXT7_API_KEY",
+                            "description": "Context7 API Key for higher rate limits (optional)",
+                            "is_required": false,
+                            "is_secret": true
+                        }
+                    ]
+                }
+            ],
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "id": "e5f6g7h8-i9j0-1234-efgh-567890123456",
+                    "published_at": "2025-09-14T00:00:00.000Z",
+                    "updated_at": "2025-09-14T00:00:00.000Z",
+                    "is_latest": true
+                }
+            }
         }
     ]
 }
