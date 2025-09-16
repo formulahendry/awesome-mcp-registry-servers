@@ -252,6 +252,56 @@
                     "is_latest": true
                 }
             }
+        },
+        {
+            "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+            "name": "Awesome Copilot",
+            "description": "Awesome Copilot MCP Server helps discover, load, and save GitHub Copilot chat modes, custom instructions, and prompts from the Awesome Copilot repository. Supports searching available customizations and saving selected items into the repository via MCP tools and prompts.",
+            "status": "active",
+            "repository": {
+                "url": "https://aka.ms/awesome-copilot/mcp",
+                "source": "github"
+            },
+            "version": "latest",
+            "packages": [
+                {
+                    "registry_type": "oci",
+                    "registry_base_url": "https://ghcr.io",
+                    "identifier": "ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot",
+                    "version": "latest",
+                    "transport": {
+                        "type": "stdio"
+                    },
+                    "runtime_hint": "docker",
+                    "runtime_arguments": [
+                        {
+                            "type": "positional",
+                            "value": "run"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "-i"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "--rm"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot:latest"
+                        }
+                    ]
+                }
+            ],
+            "remotes": [],
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "id": "f9a8b7c6-d5e4-3210-abcd-7890ef123456",
+                    "published_at": "2025-08-28T00:00:00.000Z",
+                    "updated_at": "2025-08-28T00:00:00.000Z",
+                    "is_latest": true
+                }
+            }
         }
     ]
 }
