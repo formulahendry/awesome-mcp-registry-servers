@@ -77,7 +77,7 @@
                 "url": "https://github.com/formulahendry/mcp-server-code-runner",
                 "source": "github"
             },
-            "version": "0.1.8",
+            "version": "0.1.9",
             "packages": [
                 {
                     "registry_type": "npm",
@@ -92,7 +92,7 @@
                     "registry_type": "oci",
                     "registry_base_url": "https://docker.io",
                     "identifier": "formulahendry/mcp-server-code-runner",
-                    "version": "latest",
+                    "version": "0.1.8",
                     "transport": {
                         "type": "stdio"
                     }
@@ -110,6 +110,42 @@
                     "published_at": "2025-09-13T00:00:00.000Z",
                     "updated_at": "2025-09-13T00:00:00.000Z",
                     "is_latest": true
+                }
+            }
+        },
+        {
+            "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+            "name": "Code Runner",
+            "description": "Code Runner MCP Server for running code snippets and showing results. Supports multiple programming languages including JavaScript, Python, PHP, Ruby, Go, and many more.",
+            "status": "active",
+            "repository": {
+                "url": "https://github.com/formulahendry/mcp-server-code-runner",
+                "source": "github"
+            },
+            "version": "0.1.8",
+            "packages": [
+                {
+                    "registry_type": "npm",
+                    "registry_base_url": "https://registry.npmjs.org",
+                    "identifier": "mcp-server-code-runner",
+                    "version": "0.1.8",
+                    "transport": {
+                        "type": "stdio"
+                    }
+                }
+            ],
+            "remotes": [
+                {
+                    "type": "streamable-http",
+                    "url": "https://code-runner-mcp.azurewebsites.net/mcp"
+                }
+            ],
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+                    "published_at": "2025-09-13T00:00:00.000Z",
+                    "updated_at": "2025-09-13T00:00:00.000Z",
+                    "is_latest": false
                 }
             }
         },
