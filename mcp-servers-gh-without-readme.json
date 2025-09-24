@@ -1,0 +1,2358 @@
+{
+  "servers": [
+    {
+      "name": "microsoft/fabric-rti-mcp",
+      "description": "Query Eventhouse/ADX with KQL and manage Eventstreams.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoft/fabric-rti-mcp",
+        "source": "github",
+        "id": "992876953"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:59Z",
+      "updated_at": "2025-09-23T17:40:59Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "0.1.0",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "microsoft-fabric-rti-mcp",
+              "type": "positional",
+              "value_hint": "package_spec"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{kusto_service_uri}",
+              "variables": {
+                "kusto_service_uri": {
+                  "description": "Default Kusto cluster URI (e.g., https://help.kusto.windows.net/ or your cluster)."
+                }
+              },
+              "name": "KUSTO_SERVICE_URI"
+            },
+            {
+              "value": "{kusto_default_db}",
+              "variables": {
+                "kusto_default_db": {
+                  "description": "Default database name for Kusto queries (e.g., Samples)."
+                }
+              },
+              "name": "KUSTO_SERVICE_DEFAULT_DB"
+            },
+            {
+              "value": "{az_openai_embedding_endpoint}",
+              "variables": {
+                "az_openai_embedding_endpoint": {
+                  "description": "Azure OpenAI embeddings endpoint for shots/semantic search (format: https://<resource>.openai.azure.com/openai/deployments/<name>/embeddings?api-version=<version>;impersonate)."
+                }
+              },
+              "name": "AZ_OPENAI_EMBEDDING_ENDPOINT"
+            },
+            {
+              "value": "{kusto_known_services_json}",
+              "variables": {
+                "kusto_known_services_json": {
+                  "description": "JSON array of preconfigured Kusto services (e.g., [{\"service_uri\":\"https://cluster.kusto.windows.net\",\"default_database\":\"DB\"}])."
+                }
+              },
+              "name": "KUSTO_KNOWN_SERVICES"
+            },
+            {
+              "value": "{kusto_eager_connect}",
+              "variables": {
+                "kusto_eager_connect": {
+                  "description": "Whether to eagerly connect to the default service on startup (true/false)."
+                }
+              },
+              "name": "KUSTO_EAGER_CONNECT"
+            },
+            {
+              "value": "{kusto_allow_unknown_services}",
+              "variables": {
+                "kusto_allow_unknown_services": {
+                  "description": "Allow connections to services not listed in KUSTO_KNOWN_SERVICES (true/false)."
+                }
+              },
+              "name": "KUSTO_ALLOW_UNKNOWN_SERVICES"
+            },
+            {
+              "value": "{fabric_api_base}",
+              "variables": {
+                "fabric_api_base": {
+                  "description": "Base URL for Fabric APIs (default https://api.fabric.microsoft.com/v1)."
+                }
+              },
+              "name": "FABRIC_API_BASE"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "6d7e06b1-7e1c-4ffc-a5f2-e77aeb2aa471",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.912213Z",
+          "updated_at": "2025-09-09T10:55:22.912213Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Fabric Real-Time Intelligence",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "fabric-rti-mcp",
+            "name_with_owner": "microsoft/fabric-rti-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/84d2d246df322d471c0df4cb1dd3f348bd15c449951a21926f38834efa74d90f/microsoft/fabric-rti-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-09-21T05:34:05Z",
+            "stargazer_count": 59,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "hashicorp/terraform-mcp-server",
+      "description": "Seamlessly integrate with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development powered by Terraform",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/hashicorp/terraform-mcp-server",
+        "source": "github",
+        "id": "969282615"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:42Z",
+      "updated_at": "2025-09-23T17:40:42Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "docker",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "run",
+              "type": "positional",
+              "value_hint": "docker_cmd"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-i",
+              "type": "named",
+              "value_hint": "interactive_flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--rm",
+              "type": "named",
+              "value_hint": "remove_flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "hashicorp/terraform-mcp-server",
+              "type": "positional"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "34cd3839-461a-404a-a290-3d3bc9d8bee3",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.910353Z",
+          "updated_at": "2025-09-09T10:55:22.910353Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Terraform",
+            "is_in_organization": true,
+            "license": "Mozilla Public License 2.0",
+            "name": "terraform-mcp-server",
+            "name_with_owner": "hashicorp/terraform-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/7a776a6ee4030bd1aef7c3beae80aec4ba0a89fc2eaa2e9c2ea29ab30c3c0612/hashicorp/terraform-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/761456?v=4",
+            "primary_language": "Go",
+            "primary_language_color": "#00ADD8",
+            "pushed_at": "2025-09-23T00:28:45Z",
+            "stargazer_count": 952,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "figma/dev-mode-mcp-server",
+      "description": "Expose design context to MCP clients.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/figma/dev-mode-mcp-server-guide",
+        "source": "github",
+        "id": "1032420465"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:14Z",
+      "updated_at": "2025-09-23T17:41:14Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "http://127.0.0.1:{figma_mcp_port}/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "26cb5bb7-a100-4f25-9a92-086ba4037345",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.910285Z",
+          "updated_at": "2025-09-09T10:55:22.910285Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Figma Dev Mode",
+            "is_in_organization": true,
+            "name": "dev-mode-mcp-server-guide",
+            "name_with_owner": "figma/dev-mode-mcp-server-guide",
+            "opengraph_image_url": "https://opengraph.githubassets.com/88b2f3fdaf3df5fceece5c397721404d0f507b4319271a1cf1812cd3a02555c9/figma/dev-mode-mcp-server-guide",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/5155369?v=4",
+            "pushed_at": "2025-09-23T13:46:27Z",
+            "stargazer_count": 9,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "azure/aks-mcp",
+      "description": "Interact with Azure Kubernetes Service (AKS) from MCP clients.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/Azure/aks-mcp",
+        "source": "github",
+        "id": "972374392"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:05Z",
+      "updated_at": "2025-09-23T17:41:05Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "v0.0.3",
+          "runtime_hint": "binary",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{aks_mcp_binary}",
+              "variables": {
+                "aks_mcp_binary": {
+                  "description": "Absolute path to the downloaded 'aks-mcp' binary.",
+                  "is_required": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "path_to_binary"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--transport",
+              "type": "named"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "stdio",
+              "type": "positional"
+            },
+            {
+              "format": "string",
+              "value": "--access-level",
+              "type": "named"
+            },
+            {
+              "format": "string",
+              "value": "{access_level}",
+              "variables": {
+                "access_level": {
+                  "description": "readonly | readwrite | admin (defaults to readonly if omitted)."
+                }
+              },
+              "type": "positional"
+            },
+            {
+              "format": "string",
+              "value": "--allow-namespaces",
+              "type": "named"
+            },
+            {
+              "format": "string",
+              "value": "{allow_namespaces}",
+              "variables": {
+                "allow_namespaces": {
+                  "description": "Comma-separated list of allowed namespaces (empty means all)."
+                }
+              },
+              "type": "positional"
+            },
+            {
+              "format": "string",
+              "value": "--additional-tools",
+              "type": "named"
+            },
+            {
+              "format": "string",
+              "value": "{additional_tools}",
+              "variables": {
+                "additional_tools": {
+                  "description": "Comma-separated extras (e.g., helm,cilium,hubble)."
+                }
+              },
+              "type": "positional"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{azure_tenant_id}",
+              "variables": {
+                "azure_tenant_id": {
+                  "description": "For service principal / WI auth."
+                }
+              },
+              "name": "AZURE_TENANT_ID"
+            },
+            {
+              "value": "{azure_client_id}",
+              "variables": {
+                "azure_client_id": {
+                  "description": "Service principal or managed identity client ID."
+                }
+              },
+              "name": "AZURE_CLIENT_ID"
+            },
+            {
+              "value": "{azure_client_secret}",
+              "variables": {
+                "azure_client_secret": {
+                  "description": "Service principal client secret.",
+                  "is_secret": true
+                }
+              },
+              "name": "AZURE_CLIENT_SECRET"
+            },
+            {
+              "value": "{azure_federated_token_file}",
+              "variables": {
+                "azure_federated_token_file": {
+                  "description": "Workload Identity token file path."
+                }
+              },
+              "name": "AZURE_FEDERATED_TOKEN_FILE"
+            },
+            {
+              "value": "{azure_subscription_id}",
+              "variables": {
+                "azure_subscription_id": {
+                  "description": "Optional: sets active subscription."
+                }
+              },
+              "name": "AZURE_SUBSCRIPTION_ID"
+            },
+            {
+              "value": "{azure_managed_identity}",
+              "variables": {
+                "azure_managed_identity": {
+                  "description": "Set to 'system' to use system-assigned MI."
+                }
+              },
+              "name": "AZURE_MANAGED_IDENTITY"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "52720d16-d942-4f99-8599-3af03cb1b4a0",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.910285Z",
+          "updated_at": "2025-09-09T10:55:22.910285Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Azure Kubernetes Service",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "aks-mcp",
+            "name_with_owner": "Azure/aks-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/61b63e478d68a370770a9f37f6e84b8edc4e45bd3238f186c91ea0183cda4863/Azure/aks-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6844498?v=4",
+            "primary_language": "Go",
+            "primary_language_color": "#00ADD8",
+            "pushed_at": "2025-09-23T05:10:18Z",
+            "stargazer_count": 89,
+            "topics": [
+              "kubernetes",
+              "mcp-server",
+              "model-context-protocol"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "oraios/serena",
+      "description": "Semantic code retrieval & editing tools for coding agents.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/oraios/serena",
+        "source": "github",
+        "id": "953683578"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:52Z",
+      "updated_at": "2025-09-23T17:40:52Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--from",
+              "type": "named",
+              "value_hint": "uvx_from"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "git+https://github.com/oraios/serena",
+              "type": "positional",
+              "value_hint": "git_repo"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "serena",
+              "type": "positional",
+              "value_hint": "cli"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "start-mcp-server",
+              "type": "positional",
+              "value_hint": "subcommand"
+            },
+            {
+              "format": "string",
+              "value": "--context",
+              "type": "named",
+              "value_hint": "context_flag"
+            },
+            {
+              "format": "string",
+              "value": "{serena_context}",
+              "variables": {
+                "serena_context": {
+                  "description": "Serena context to use (e.g., ide-assistant)."
+                }
+              },
+              "type": "positional",
+              "value_hint": "serena_context"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--project",
+              "type": "named",
+              "value_hint": "project_flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{serena_project_abs_path}",
+              "variables": {
+                "serena_project_abs_path": {
+                  "description": "Absolute path to the project root Serena should index.",
+                  "is_required": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "project_abs_path"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "0658e342-7ae7-493a-b378-a324363ee322",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.910285Z",
+          "updated_at": "2025-09-09T10:55:22.910285Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Serena",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "serena",
+            "name_with_owner": "oraios/serena",
+            "opengraph_image_url": "https://opengraph.githubassets.com/d0170f7e5c592724ee4a9865156c0f088417d490f8377fb37eba4f1fe65b2a59/oraios/serena",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/181485370?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-09-23T14:27:10Z",
+            "stargazer_count": 12988,
+            "topics": [
+              "agent",
+              "ai",
+              "llms",
+              "vibe-coding",
+              "mcp-server",
+              "ai-coding",
+              "language-server",
+              "programming",
+              "claude",
+              "claude-code"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "stripe/agent-toolkit",
+      "description": "Interact with Stripe API",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/stripe/agent-toolkit",
+        "source": "github",
+        "id": "886826524"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:33Z",
+      "updated_at": "2025-09-23T17:40:33Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.stripe.com"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "f0b8ecdd-498c-4087-8ae2-b2677215b7ca",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.910285Z",
+          "updated_at": "2025-09-09T10:55:22.910285Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Stripe",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "agent-toolkit",
+            "name_with_owner": "stripe/agent-toolkit",
+            "opengraph_image_url": "https://opengraph.githubassets.com/3ac9a99ef66f989f3c8bed8f7b661e4904420791c693a8adca4b61d546eb3ea2/stripe/agent-toolkit",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/856813?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-16T19:00:44Z",
+            "stargazer_count": 961,
+            "topics": [
+              "llm",
+              "llm-agents",
+              "python",
+              "typescript",
+              "workflows",
+              "mcp"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "makenotion/notion-mcp-server",
+      "description": "Official MCP server for Notion API",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/makenotion/notion-mcp-server",
+        "source": "github",
+        "id": "946169991"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:24Z",
+      "updated_at": "2025-09-23T17:40:24Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.notion.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "2a045418-16b2-4ea6-bc36-113feb0df335",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.909499Z",
+          "updated_at": "2025-09-09T10:55:22.909499Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Notion",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "notion-mcp-server",
+            "name_with_owner": "makenotion/notion-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/23454903b80d679e2f12de6baf41e0b906468031ce590571f805466ccbabb614/makenotion/notion-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/4792552?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-08-22T19:08:45Z",
+            "stargazer_count": 3221,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "atlassian/atlassian-mcp-server",
+      "description": "Remote MCP Server that securely connects Jira and Confluence with your LLM, IDE, or agent platform of choice.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/atlassian/atlassian-mcp-server",
+        "source": "github",
+        "id": "1030580992"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:29Z",
+      "updated_at": "2025-09-23T17:40:29Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.atlassian.com/v1/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "28c650c6-5e61-4ab7-9eb2-505be6350476",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.909438Z",
+          "updated_at": "2025-09-09T10:55:22.909438Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Atlassian",
+            "is_in_organization": true,
+            "license": "Apache License 2.0",
+            "name": "atlassian-mcp-server",
+            "name_with_owner": "atlassian/atlassian-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/a425bb74576097000dd2bc8b5b450cdd9842c582742963a5c9150e2766ec1956/atlassian/atlassian-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/168166?v=4",
+            "pushed_at": "2025-08-05T01:23:21Z",
+            "stargazer_count": 19,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "neondatabase/mcp-server-neon",
+      "description": "MCP server for interacting with Neon Management API and databases",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/neondatabase/mcp-server-neon",
+        "source": "github",
+        "id": "896203400"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:22Z",
+      "updated_at": "2025-09-23T17:40:22Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.neon.tech/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "80cf5adf-774d-45c6-b97a-d527509aa505",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.909438Z",
+          "updated_at": "2025-09-09T10:55:22.909438Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Neon",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "mcp-server-neon",
+            "name_with_owner": "neondatabase/mcp-server-neon",
+            "opengraph_image_url": "https://opengraph.githubassets.com/8ca812841f9e02134d5109767e26261669f53791440c6aa68f58d38b0225b6de/neondatabase/mcp-server-neon",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/77690634?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-16T13:25:25Z",
+            "stargazer_count": 468,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "mongodb-js/mongodb-mcp-server",
+      "description": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+        "source": "github",
+        "id": "960484071"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:31Z",
+      "updated_at": "2025-09-23T17:40:31Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional",
+              "value_hint": "noninteractive_mode"
+            },
+            {
+              "format": "string",
+              "value": "--connectionString",
+              "type": "named",
+              "value_hint": "argument"
+            },
+            {
+              "format": "string",
+              "value": "mongodb://{mongo_host}:{mongo_port}/{mongo_database}",
+              "variables": {
+                "mongo_database": {
+                  "description": "Default database name (e.g., myDatabase)",
+                  "is_required": true
+                },
+                "mongo_host": {
+                  "description": "MongoDB host (e.g., localhost or cluster0.xxxxx.mongodb.net)",
+                  "default": "localhost"
+                },
+                "mongo_port": {
+                  "description": "MongoDB port (e.g., 27017). For SRV URIs, omit and use the +srv scheme.",
+                  "default": "27017"
+                }
+              },
+              "type": "positional",
+              "value_hint": "argument"
+            },
+            {
+              "format": "string",
+              "value": "--readOnly",
+              "type": "named",
+              "value_hint": "argument"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "7de30975-08be-4120-997e-86f772f784bd",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.909358Z",
+          "updated_at": "2025-09-09T10:55:22.909358Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Mongodb",
+            "is_in_organization": true,
+            "license": "Apache License 2.0",
+            "name": "mongodb-mcp-server",
+            "name_with_owner": "mongodb-js/mongodb-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/3dcb44d4ac75abaca08a0999a8ef0ec6414b423dd21193b4ba632d0ce01b5ad5/mongodb-js/mongodb-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/11214950?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-23T17:09:23Z",
+            "stargazer_count": 638,
+            "topics": [
+              "mcp",
+              "mcp-server",
+              "mongodb",
+              "mongodb-atlas",
+              "mongodb-database"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "pydantic/logfire-mcp",
+      "description": "Provides access to OpenTelemetry traces and metrics through Logfire.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/pydantic/logfire-mcp",
+        "source": "github",
+        "id": "943883428"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:36Z",
+      "updated_at": "2025-09-23T17:40:36Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "logfire-mcp@latest",
+              "type": "positional",
+              "value_hint": "package_spec"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--read-token",
+              "type": "named",
+              "value_hint": "flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{logfire_token}",
+              "is_secret": true,
+              "variables": {
+                "logfire_token": {
+                  "description": "Pydantic Logfire read token (project-specific)",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "read_token"
+            },
+            {
+              "format": "string",
+              "value": "--base-url",
+              "type": "named",
+              "value_hint": "flag"
+            },
+            {
+              "format": "string",
+              "value": "{logfire_base_url}",
+              "variables": {
+                "logfire_base_url": {
+                  "description": "Self-hosted Logfire base URL (omit for cloud)"
+                }
+              },
+              "type": "positional",
+              "value_hint": "base_url"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "89ee8051-ae2e-49b6-8372-d9d8f5133d9c",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.909183Z",
+          "updated_at": "2025-09-09T10:55:22.909183Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Logfire",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "logfire-mcp",
+            "name_with_owner": "pydantic/logfire-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/32435937fb8f07a980d8c9d96b660b2a9d74023932326c0bdb03fde161ef094b/pydantic/logfire-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/110818415?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-08-08T17:38:31Z",
+            "stargazer_count": 108,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "chroma-core/chroma-mcp",
+      "description": "Provides data retrieval capabilities powered by Chroma, enabling AI models to create collections over generated data and user inputs, and retrieve that data using vector search, full text search, metadata filtering, and more.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/chroma-core/chroma-mcp",
+        "source": "github",
+        "id": "930632525"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:29Z",
+      "updated_at": "2025-09-23T17:41:29Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "chroma-mcp",
+              "type": "positional"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{chroma_client_type}",
+              "variables": {
+                "chroma_client_type": {
+                  "description": "Client type: ephemeral (default), persistent, cloud, or http."
+                }
+              },
+              "name": "CHROMA_CLIENT_TYPE"
+            },
+            {
+              "value": "{chroma_dotenv_path}",
+              "variables": {
+                "chroma_dotenv_path": {
+                  "description": "Optional path to .env (defaults to ./.chroma_env)."
+                }
+              },
+              "name": "CHROMA_DOTENV_PATH"
+            },
+            {
+              "value": "{chroma_data_dir}",
+              "variables": {
+                "chroma_data_dir": {
+                  "description": "Data directory for persistent client."
+                }
+              },
+              "name": "CHROMA_DATA_DIR"
+            },
+            {
+              "value": "{chroma_tenant}",
+              "variables": {
+                "chroma_tenant": {
+                  "description": "Chroma Cloud tenant ID."
+                }
+              },
+              "name": "CHROMA_TENANT"
+            },
+            {
+              "value": "{chroma_database}",
+              "variables": {
+                "chroma_database": {
+                  "description": "Chroma Cloud database name."
+                }
+              },
+              "name": "CHROMA_DATABASE"
+            },
+            {
+              "value": "{chroma_api_key}",
+              "variables": {
+                "chroma_api_key": {
+                  "description": "Chroma Cloud API key.",
+                  "is_secret": true
+                }
+              },
+              "name": "CHROMA_API_KEY"
+            },
+            {
+              "value": "{chroma_host}",
+              "variables": {
+                "chroma_host": {
+                  "description": "Self-hosted Chroma host."
+                }
+              },
+              "name": "CHROMA_HOST"
+            },
+            {
+              "value": "{chroma_port}",
+              "variables": {
+                "chroma_port": {
+                  "description": "Self-hosted Chroma port."
+                }
+              },
+              "name": "CHROMA_PORT"
+            },
+            {
+              "value": "{chroma_custom_auth}",
+              "variables": {
+                "chroma_custom_auth": {
+                  "description": "Custom auth credentials for self-hosted Chroma.",
+                  "is_secret": true
+                }
+              },
+              "name": "CHROMA_CUSTOM_AUTH_CREDENTIALS"
+            },
+            {
+              "value": "{chroma_ssl}",
+              "variables": {
+                "chroma_ssl": {
+                  "description": "Use SSL (true/false) for self-hosted HTTP."
+                }
+              },
+              "name": "CHROMA_SSL"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "54222ba5-0bc5-428d-bdb0-5dbcf2574b83",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.908927Z",
+          "updated_at": "2025-09-09T10:55:22.908927Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Chroma",
+            "is_in_organization": true,
+            "license": "Apache License 2.0",
+            "name": "chroma-mcp",
+            "name_with_owner": "chroma-core/chroma-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/a675cafdebb43f6f36c0b5963a9f6732b97e97a1af9a4dbbca5e47ee7b4b2513/chroma-core/chroma-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/105881770?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-09-17T20:20:13Z",
+            "stargazer_count": 366,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "jfrog/jfrog-mcp-server",
+      "description": "JFrog MCP Server: providing your agents with direct access to JFrog Platform services.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/jfrog/jfrog-mcp-server",
+        "source": "github",
+        "id": "1052771163"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:10Z",
+      "updated_at": "2025-09-23T17:41:10Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://{jfrog_platform_url}/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "79dd45f0-3ae2-49ee-b0d4-a278477e9088",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.908927Z",
+          "updated_at": "2025-09-09T10:55:22.908927Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "JFrog",
+            "is_in_organization": true,
+            "name": "jfrog-mcp-server",
+            "name_with_owner": "jfrog/jfrog-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/516f79121cc9441d7f2ff71f6559af749b1f8c640054fe6e90a45818f0f4859e/jfrog/jfrog-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/499942?v=4",
+            "pushed_at": "2025-09-11T10:22:20Z",
+            "stargazer_count": 2,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "firecrawl/firecrawl-mcp-server",
+      "description": "Extract web data with Firecrawl",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "source": "github",
+        "id": "899407931"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:45Z",
+      "updated_at": "2025-09-23T17:40:45Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional",
+              "value_hint": "noninteractive_mode"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{api_key}",
+              "variables": {
+                "api_key": {
+                  "description": "your API key",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "name": "FIRECRAWL_API_KEY"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "d586c74c-4aa1-4aa2-9aa3-046e58fcb84f",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.908539Z",
+          "updated_at": "2025-09-09T10:55:22.908539Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Firecrawl",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "firecrawl-mcp-server",
+            "name_with_owner": "firecrawl/firecrawl-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/9da1dc294a6eeb11b4ffc34617f837cf14d34e1e70b1bdc40ed0b3260e52d37f/firecrawl/firecrawl-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4",
+            "primary_language": "JavaScript",
+            "primary_language_color": "#f1e05a",
+            "pushed_at": "2025-09-17T16:33:04Z",
+            "stargazer_count": 4583,
+            "topics": [
+              "batch-processing",
+              "claude",
+              "content-extraction",
+              "data-collection",
+              "firecrawl",
+              "firecrawl-ai",
+              "llm-tools",
+              "mcp-server",
+              "model-context-protocol",
+              "search-api"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "dynatrace-oss/dynatrace-mcp",
+      "description": "Manage and interact with the Dynatrace Platform for real-time observability and monitoring.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/dynatrace-oss/dynatrace-mcp",
+        "source": "github",
+        "id": "971357826"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:38Z",
+      "updated_at": "2025-09-23T17:40:38Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "environment_variables": [
+            {
+              "value": "{dt_environment}",
+              "variables": {
+                "dt_environment": {
+                  "description": "Dynatrace Platform URL (e.g., https://abc12345.apps.dynatrace.com — not classic live.dynatrace.com).",
+                  "is_required": true
+                }
+              },
+              "name": "DT_ENVIRONMENT"
+            },
+            {
+              "value": "{dt_platform_token}",
+              "variables": {
+                "dt_platform_token": {
+                  "description": "Dynatrace Platform Token (recommended auth).",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "name": "DT_PLATFORM_TOKEN"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "08afd42e-5082-4f1f-b025-1fdcee7a1be1",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.908413Z",
+          "updated_at": "2025-09-09T10:55:22.908413Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Dynatrace",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "dynatrace-mcp",
+            "name_with_owner": "dynatrace-oss/dynatrace-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/1e79a0836a6e095ff2c3dbb484e8d1c522cca1314f1e7a87f70e4ac4f872d80d/dynatrace-oss/dynatrace-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/58178984?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-23T16:01:00Z",
+            "stargazer_count": 146,
+            "topics": [
+              "claude",
+              "cline",
+              "dynatrace",
+              "mcp",
+              "monitoring",
+              "observability",
+              "copilot"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "microsoft/azure-devops-mcp",
+      "description": "Interact with Azure DevOps services like repositories, work items, builds, releases, test plans, and code search.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoft/azure-devops-mcp",
+        "source": "github",
+        "id": "984142834"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:07Z",
+      "updated_at": "2025-09-23T17:41:07Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional",
+              "value_hint": "noninteractive_mode"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "@azure-devops/mcp",
+              "type": "positional",
+              "value_hint": "package_spec"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{ado_org}",
+              "variables": {
+                "ado_org": {
+                  "description": "Azure DevOps organization name (e.g., contoso).",
+                  "is_required": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "organization"
+            },
+            {
+              "format": "string",
+              "value": "-d",
+              "type": "named",
+              "value_hint": "optional_flag"
+            },
+            {
+              "format": "string",
+              "value": "{ado_domain}",
+              "variables": {
+                "ado_domain": {
+                  "description": "Repeat to enable specific domains: core, work, work-items, search, test-plans, repositories, wiki, pipelines, advanced-security."
+                }
+              },
+              "type": "positional",
+              "is_repeated": true,
+              "value_hint": "domain"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "0348a3b3-6f52-4664-9eb7-bf732f71c144",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907776Z",
+          "updated_at": "2025-09-09T10:55:22.907776Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Azure DevOps",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "azure-devops-mcp",
+            "name_with_owner": "microsoft/azure-devops-mcp",
+            "opengraph_image_url": "https://repository-images.githubusercontent.com/984142834/d0a14641-bb08-45c9-a6f6-d0096a355a3b",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-22T18:40:21Z",
+            "stargazer_count": 806,
+            "uses_custom_opengraph_image": true
+          }
+        }
+      }
+    },
+    {
+      "name": "azure-ai-foundry/mcp-foundry",
+      "description": "An experimental MCP server implementation for Azure AI Foundry that exposes unified tools for models, knowledge, evaluation and deployment.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/azure-ai-foundry/mcp-foundry",
+        "source": "github",
+        "id": "952560918"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:09Z",
+      "updated_at": "2025-09-23T17:41:09Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "main",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "format": "string",
+              "value": "--prerelease=allow",
+              "type": "named"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--from",
+              "type": "named"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "git+https://github.com/azure-ai-foundry/mcp-foundry.git",
+              "type": "positional"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "run-azure-ai-foundry-mcp",
+              "type": "positional"
+            },
+            {
+              "format": "string",
+              "value": "--envFile",
+              "type": "named"
+            },
+            {
+              "format": "string",
+              "value": "{env_file_path}",
+              "variables": {
+                "env_file_path": {
+                  "description": "Path to a .env file to load (e.g., ${workspaceFolder}/.env)."
+                }
+              },
+              "type": "positional"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{github_token}",
+              "variables": {
+                "github_token": {
+                  "description": "Optional: GitHub token for testing models for free with rate limits.",
+                  "is_secret": true
+                }
+              },
+              "name": "GITHUB_TOKEN"
+            },
+            {
+              "value": "{ai_search_endpoint}",
+              "variables": {
+                "ai_search_endpoint": {
+                  "description": "Your Azure AI Search endpoint (https://<service>.search.windows.net/). Required for knowledge tools."
+                }
+              },
+              "name": "AZURE_AI_SEARCH_ENDPOINT"
+            },
+            {
+              "value": "{ai_search_api_version}",
+              "variables": {
+                "ai_search_api_version": {
+                  "description": "API version (defaults to 2025-03-01-preview)."
+                }
+              },
+              "name": "AZURE_AI_SEARCH_API_VERSION"
+            },
+            {
+              "value": "{search_auth_method}",
+              "variables": {
+                "search_auth_method": {
+                  "description": "Authentication method: 'service-principal' or 'api-search-key'."
+                }
+              },
+              "name": "SEARCH_AUTHENTICATION_METHOD"
+            },
+            {
+              "value": "{azure_tenant_id}",
+              "variables": {
+                "azure_tenant_id": {
+                  "description": "Required if using service-principal auth."
+                }
+              },
+              "name": "AZURE_TENANT_ID"
+            },
+            {
+              "value": "{azure_client_id}",
+              "variables": {
+                "azure_client_id": {
+                  "description": "Required if using service-principal auth."
+                }
+              },
+              "name": "AZURE_CLIENT_ID"
+            },
+            {
+              "value": "{azure_client_secret}",
+              "variables": {
+                "azure_client_secret": {
+                  "description": "Required if using service-principal auth.",
+                  "is_secret": true
+                }
+              },
+              "name": "AZURE_CLIENT_SECRET"
+            },
+            {
+              "value": "{ai_search_api_key}",
+              "variables": {
+                "ai_search_api_key": {
+                  "description": "Required if using api-search-key auth.",
+                  "is_secret": true
+                }
+              },
+              "name": "AZURE_AI_SEARCH_API_KEY"
+            },
+            {
+              "value": "{eval_data_dir}",
+              "variables": {
+                "eval_data_dir": {
+                  "description": "Path to JSONL datasets for evaluation tools."
+                }
+              },
+              "name": "EVAL_DATA_DIR"
+            },
+            {
+              "value": "{az_openai_endpoint}",
+              "variables": {
+                "az_openai_endpoint": {
+                  "description": "Endpoint for text-quality evaluators (optional)."
+                }
+              },
+              "name": "AZURE_OPENAI_ENDPOINT"
+            },
+            {
+              "value": "{az_openai_api_key}",
+              "variables": {
+                "az_openai_api_key": {
+                  "description": "API key for the above endpoint (optional).",
+                  "is_secret": true
+                }
+              },
+              "name": "AZURE_OPENAI_API_KEY"
+            },
+            {
+              "value": "{az_openai_deployment}",
+              "variables": {
+                "az_openai_deployment": {
+                  "description": "Deployment name (e.g., gpt-4o) used by evaluators (optional)."
+                }
+              },
+              "name": "AZURE_OPENAI_DEPLOYMENT"
+            },
+            {
+              "value": "{az_openai_api_version}",
+              "variables": {
+                "az_openai_api_version": {
+                  "description": "API version for Azure OpenAI (optional)."
+                }
+              },
+              "name": "AZURE_OPENAI_API_VERSION"
+            },
+            {
+              "value": "{ai_project_endpoint}",
+              "variables": {
+                "ai_project_endpoint": {
+                  "description": "Azure AI Project endpoint for agent tools (optional)."
+                }
+              },
+              "name": "AZURE_AI_PROJECT_ENDPOINT"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "edcc494d-9f35-47be-8f64-148e3a21dbc8",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907291Z",
+          "updated_at": "2025-09-09T10:55:22.907291Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Azure AI Foundry",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "mcp-foundry",
+            "name_with_owner": "azure-ai-foundry/mcp-foundry",
+            "opengraph_image_url": "https://opengraph.githubassets.com/db4b5d19736a587c484476dec09c16410f43db9ad87e6b773a69cb220fcbc3dc/azure-ai-foundry/mcp-foundry",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/202016865?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-08-01T15:59:25Z",
+            "stargazer_count": 204,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "microsoft/clarity-mcp-server",
+      "description": "Fetch Clarity analytics via MCP clients.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoft/clarity-mcp-server",
+        "source": "github",
+        "id": "967081230"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:01Z",
+      "updated_at": "2025-09-23T17:41:01Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional",
+              "value_hint": "noninteractive_mode"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "@microsoft/clarity-mcp-server",
+              "type": "positional",
+              "value_hint": "package_spec"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--clarity_api_token",
+              "type": "named",
+              "value_hint": "flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{clarity_api_token}",
+              "is_secret": true,
+              "variables": {
+                "clarity_api_token": {
+                  "description": "Microsoft Clarity Data Export API token (generate in Clarity: Settings → Data Export).",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "clarity_api_token_value"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "782c24a9-e88c-4ee7-8f17-e073dc9c71a6",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907284Z",
+          "updated_at": "2025-09-09T10:55:22.907284Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Clarity",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "clarity-mcp-server",
+            "name_with_owner": "microsoft/clarity-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/a73f33c67c59a76fa2389d3c116c5ad28d5034295c7ac5771436a2dc96affbe0/microsoft/clarity-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-08-05T09:33:14Z",
+            "stargazer_count": 41,
+            "topics": [
+              "mcp",
+              "analytics"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "zapier/zapier-mcp",
+      "description": "Zapier MCP is a remote MCP server that gives your AI direct access to 8,000+ apps and 30,000+ actions—no complex API integrations required.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/zapier/zapier-mcp",
+        "source": "github",
+        "id": "1054982602"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:48Z",
+      "updated_at": "2025-09-23T17:40:48Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "{zapier_mcp_url}"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "97f27752-fea7-4f08-b814-88a48dfcd4e2",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907123Z",
+          "updated_at": "2025-09-09T10:55:22.907123Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Zapier",
+            "is_in_organization": true,
+            "name": "zapier-mcp",
+            "name_with_owner": "zapier/zapier-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/5e91d52fb4b203befdea18d027951c0acffc1063769893b72cf34ea2d8af1ab2/zapier/zapier-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/1261889?v=4",
+            "pushed_at": "2025-09-11T16:44:54Z",
+            "stargazer_count": 3,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "sunriseapps/imagesorcery-mcp",
+      "description": "Local image processing with computer vision capabilities including object detection, OCR, image editing, and transformations.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/sunriseapps/imagesorcery-mcp",
+        "source": "github",
+        "id": "982160482"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:46Z",
+      "updated_at": "2025-09-23T17:40:46Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "0.11.4",
+          "runtime_hint": "binary",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{imagesorcery_binary}",
+              "variables": {
+                "imagesorcery_binary": {
+                  "description": "Path to the 'imagesorcery-mcp' executable (or just 'imagesorcery-mcp' if it’s in PATH). On Windows: imagesorcery-mcp.exe",
+                  "is_required": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "path_or_command"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "78ed6aa5-3037-4adb-9bda-8dcda12aa9a5",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907123Z",
+          "updated_at": "2025-09-09T10:55:22.907123Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Imagesorcery",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "imagesorcery-mcp",
+            "name_with_owner": "sunriseapps/imagesorcery-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/69633e599c8380bd2b26cbec2643fbd8ac4de15e44ddd513a8812a8a4fafa32c/sunriseapps/imagesorcery-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/211119887?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-08-24T19:54:53Z",
+            "stargazer_count": 191,
+            "topics": [
+              "computer-vision",
+              "image-processing",
+              "ocr",
+              "opencv",
+              "image-editing",
+              "image-manipulation",
+              "mcp",
+              "mcp-server"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "antfu/nuxt-mcp",
+      "description": "MCP server helping models understand your Vite/Nuxt app.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/antfu/nuxt-mcp",
+        "source": "github",
+        "id": "946411030"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:55Z",
+      "updated_at": "2025-09-23T17:40:55Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.nuxt.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "7d2aa3fa-ab7a-4609-b27c-7b24037bf6ce",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907116Z",
+          "updated_at": "2025-09-09T10:55:22.907116Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Nuxt",
+            "is_in_organization": false,
+            "license": "MIT License",
+            "name": "nuxt-mcp",
+            "name_with_owner": "antfu/nuxt-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/f806f297ca45466ed7ada9b4f899b075b566fe2d7985b4a4c6f5619c491035fc/antfu/nuxt-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/11247099?u=746eca82e375631967235dd01261428762bbcbf9&v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-08-02T01:18:48Z",
+            "stargazer_count": 768,
+            "topics": [
+              "mcp",
+              "nuxt",
+              "vite"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "coplaydev/unity-mcp",
+      "description": "Control the Unity Editor from MCP clients via a Unity bridge + local Python server.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/CoplayDev/unity-mcp",
+        "source": "github",
+        "id": "950564038"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:53Z",
+      "updated_at": "2025-09-23T17:40:53Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "workspace",
+          "runtime_hint": "uv",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "--directory",
+              "type": "named",
+              "value_hint": "directory_flag"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "{unity_mcp_server_src}",
+              "variables": {
+                "unity_mcp_server_src": {
+                  "description": "Absolute path to the Unity MCP Server 'src' folder installed by the Unity package (e.g., macOS: ~/Library/Application Support/UnityMCP/UnityMcpServer/src; Windows: %USERPROFILE%/AppData/Local/UnityMCP/UnityMcpServer/src; Linux: ~/.local/share/UnityMCP/UnityMcpServer/src).",
+                  "is_required": true
+                }
+              },
+              "type": "positional",
+              "value_hint": "unity_mcp_server_src"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "run",
+              "type": "positional",
+              "value_hint": "run"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "server.py",
+              "type": "positional",
+              "value_hint": "entrypoint"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "776e74ed-3a5a-4642-8710-13ee91ed1c10",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907116Z",
+          "updated_at": "2025-09-09T10:55:22.907116Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Unity",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "unity-mcp",
+            "name_with_owner": "CoplayDev/unity-mcp",
+            "opengraph_image_url": "https://repository-images.githubusercontent.com/950564038/29569e93-0949-4b10-87c5-c530ba068a26",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/188132522?v=4",
+            "primary_language": "C#",
+            "primary_language_color": "#178600",
+            "pushed_at": "2025-09-23T13:35:29Z",
+            "stargazer_count": 3240,
+            "topics": [
+              "ai",
+              "ai-integration",
+              "mcp",
+              "unity",
+              "anthropic",
+              "claude",
+              "copilot",
+              "cursor",
+              "deepseek",
+              "game-development"
+            ],
+            "uses_custom_opengraph_image": true
+          }
+        }
+      }
+    },
+    {
+      "name": "upstash/context7",
+      "description": "Get up-to-date, version-specific documentation and code examples from any library or framework.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/upstash/context7",
+        "source": "github",
+        "id": "955620917"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:50Z",
+      "updated_at": "2025-09-23T17:40:50Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.context7.com/mcp",
+          "headers": [
+            {
+              "value": "{context7_api_key}",
+              "variables": {
+                "context7_api_key": {
+                  "description": "Context7 API key (optional; increases rate limits). Get one at https://context7.com/dashboard",
+                  "is_secret": true
+                }
+              },
+              "name": "CONTEXT7_API_KEY"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "dcec7705-b81b-4e0f-8615-8032604be7ad",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907116Z",
+          "updated_at": "2025-09-09T10:55:22.907116Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Context7",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "context7",
+            "name_with_owner": "upstash/context7",
+            "opengraph_image_url": "https://opengraph.githubassets.com/9b06137189d0234a786767b20dee29afeee7b78a79ab2f386705579216601f65/upstash/context7",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/74989412?v=4",
+            "primary_language": "JavaScript",
+            "primary_language_color": "#f1e05a",
+            "pushed_at": "2025-09-22T09:54:37Z",
+            "stargazer_count": 31223,
+            "topics": [
+              "llm",
+              "mcp",
+              "mcp-server",
+              "vibe-coding"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "microsoft/markitdown",
+      "description": "Convert various file formats (PDF, Word, Excel, images, audio) to Markdown.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoft/markitdown",
+        "source": "github",
+        "id": "888092115"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:03Z",
+      "updated_at": "2025-09-23T17:41:03Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "0.0.1a4",
+          "runtime_hint": "uvx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "markitdown-mcp",
+              "type": "positional"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "976a2f68-e16c-4e2b-9709-7133487f8c14",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907101Z",
+          "updated_at": "2025-09-09T10:55:22.907101Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Markitdown",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "markitdown",
+            "name_with_owner": "microsoft/markitdown",
+            "opengraph_image_url": "https://opengraph.githubassets.com/f9e18291dfdbefd896a2fc3bde99f34206d1aabc6ca888ab8794ffbc0dfeb5e3/microsoft/markitdown",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+            "primary_language": "Python",
+            "primary_language_color": "#3572A5",
+            "pushed_at": "2025-09-08T15:37:34Z",
+            "stargazer_count": 79820,
+            "topics": [
+              "langchain",
+              "openai",
+              "autogen-extension",
+              "autogen",
+              "markdown",
+              "microsoft-office",
+              "pdf"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "getsentry/sentry-mcp",
+      "description": "Retrieve and analyze application errors and performance issues from Sentry projects.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/getsentry/sentry-mcp",
+        "source": "github",
+        "id": "957245447"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:40:43Z",
+      "updated_at": "2025-09-23T17:40:43Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.sentry.dev/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "29bf7a98-e581-45da-a327-1ae890f17464",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907078Z",
+          "updated_at": "2025-09-09T10:55:22.907078Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Sentry",
+            "is_in_organization": true,
+            "license": "Other",
+            "name": "sentry-mcp",
+            "name_with_owner": "getsentry/sentry-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/5647b07e6052bfa3eb387bd2b6478a8cd78c7d31666f3b3eeb2d2ff09f2b55c2/getsentry/sentry-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/1396951?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-22T22:23:27Z",
+            "stargazer_count": 358,
+            "topics": [
+              "mcp-server",
+              "tag-production"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "microsoft/playwright-mcp",
+      "description": "Automate web browsers using accessibility trees for testing and data extraction.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoft/playwright-mcp",
+        "source": "github",
+        "id": "952688112"
+      },
+      "version": "0.0.1-seed",
+      "created_at": "2025-09-23T17:40:57Z",
+      "updated_at": "2025-09-23T17:40:57Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "41b79849-7e6c-4fc7-82c0-5a611ea21523",
+          "is_latest": true,
+          "published_at": "2025-09-09T10:55:22.907061Z",
+          "updated_at": "2025-09-09T10:55:22.907061Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Playwright",
+            "is_in_organization": true,
+            "license": "Apache License 2.0",
+            "name": "playwright-mcp",
+            "name_with_owner": "microsoft/playwright-mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/321e48468c9bdfe4415bd9886c1d01969442fbec3fc8cc78dfe2ce0dbe1d6dc5/microsoft/playwright-mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-22T23:47:13Z",
+            "stargazer_count": 20188,
+            "topics": [
+              "mcp",
+              "playwright"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "microsoftdocs/mcp",
+      "description": "Enables clients like GitHub Copilot and other AI agents to bring trusted and up-to-date information directly from Microsoft's official documentation.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/microsoftdocs/mcp",
+        "source": "github",
+        "id": "998658053"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:32Z",
+      "updated_at": "2025-09-23T17:41:32Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://learn.microsoft.com/api/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "e0455530-d34a-4795-8dc6-b2888ae76c27",
+          "is_latest": true,
+          "published_at": "2025-08-22T00:00:00Z",
+          "updated_at": "2025-08-22T00:00:00Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Microsoft Learn",
+            "is_in_organization": true,
+            "license": "Creative Commons Attribution 4.0 International",
+            "name": "mcp",
+            "name_with_owner": "MicrosoftDocs/mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/682c046deeacf7db582b58bc2addc52a450e26bd9805830b0e2764c815afb78c/MicrosoftDocs/mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/22479449?v=4",
+            "pushed_at": "2025-09-19T06:15:36Z",
+            "stargazer_count": 926,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "webflow/mcp-server",
+      "description": "Enable AI agents to interact with Webflow APIs.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/webflow/mcp-server",
+        "source": "github",
+        "id": "950272413"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:25Z",
+      "updated_at": "2025-09-23T17:41:25Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "remotes": [
+        {
+          "transport_type": "sse",
+          "url": "https://mcp.webflow.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "d74444a2-c698-42ee-856c-03da0d434343",
+          "is_latest": true,
+          "published_at": "2025-08-22T00:00:00Z",
+          "updated_at": "2025-08-22T00:00:00Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Webflow",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "mcp-server",
+            "name_with_owner": "webflow/mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/3895420e2e1357ba0037e64ca6ba6b8a5ef410348d0d5a907220f9e72dcab018/webflow/mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/1229663?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-17T19:59:39Z",
+            "stargazer_count": 82,
+            "topics": [
+              "built-with-fern",
+              "generated-from-openapi",
+              "mcp-server",
+              "model-context-protocol",
+              "business-critical-yes"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "mondaycom/mcp",
+      "description": "Enable AI agents to work reliably - giving them secure access to structured data, tools to take action, and the context needed to make smart decisions.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/mondaycom/mcp",
+        "source": "github",
+        "id": "961296260"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:23Z",
+      "updated_at": "2025-09-23T17:41:23Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "@mondaydotcomorg/monday-api-mcp",
+              "type": "positional"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{monday_api_token}",
+              "variables": {
+                "monday_api_token": {
+                  "description": "Your monday.com API token (can also be passed with -t/--token).",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "name": "monday_token"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "52673640-90be-4bc5-9899-87e0886cb9ff",
+          "is_latest": true,
+          "published_at": "2025-08-22T00:00:00Z",
+          "updated_at": "2025-08-22T00:00:00Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Monday.com",
+            "is_in_organization": true,
+            "license": "MIT License",
+            "name": "mcp",
+            "name_with_owner": "mondaycom/mcp",
+            "opengraph_image_url": "https://opengraph.githubassets.com/8bd843b1d2a438f56bf115c238fb8458230c102dd8996e22b5ff66d458ca2664/mondaycom/mcp",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/61420283?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-23T14:45:13Z",
+            "stargazer_count": 308,
+            "topics": [
+              "agents",
+              "copilot",
+              "mcp",
+              "mcp-server",
+              "monday"
+            ],
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    },
+    {
+      "name": "codacy/codacy-mcp-server",
+      "description": "MCP Server for the Codacy API, enabling access to repositories, files, quality, coverage, security and more.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/codacy/codacy-mcp-server",
+        "source": "github",
+        "id": "954645052"
+      },
+      "version": "1.0.0",
+      "created_at": "2025-09-23T17:41:21Z",
+      "updated_at": "2025-09-23T17:41:21Z",
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "packages": [
+        {
+          "version": "latest",
+          "runtime_hint": "npx",
+          "runtime_arguments": [
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "-y",
+              "type": "positional"
+            },
+            {
+              "is_required": true,
+              "format": "string",
+              "value": "@codacy/codacy-mcp",
+              "type": "positional"
+            }
+          ],
+          "environment_variables": [
+            {
+              "value": "{codacy_account_token}",
+              "variables": {
+                "codacy_account_token": {
+                  "description": "Your Codacy Account API token (from app.codacy.com → Account). Required.",
+                  "is_required": true,
+                  "is_secret": true
+                }
+              },
+              "name": "CODACY_ACCOUNT_TOKEN"
+            },
+            {
+              "value": "{codacy_cli_version}",
+              "variables": {
+                "codacy_cli_version": {
+                  "description": "Optional: pin Codacy CLI version used by local analysis (e.g., 2.3.1)."
+                }
+              },
+              "name": "CODACY_CLI_VERSION"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "59072bd2-da6e-4160-813d-33cdf0b1dbe1",
+          "is_latest": true,
+          "published_at": "2025-08-22T00:00:00Z",
+          "updated_at": "2025-08-22T00:00:00Z"
+        },
+        "io.modelcontextprotocol.registry/publisher-provided": {
+          "github": {
+            "display_name": "Codacy",
+            "is_in_organization": true,
+            "license": "Other",
+            "name": "codacy-mcp-server",
+            "name_with_owner": "codacy/codacy-mcp-server",
+            "opengraph_image_url": "https://opengraph.githubassets.com/9fb1a96c9d5c697b43a8c03fada3197fca2eca38204e24772ea73b5554729f1e/codacy/codacy-mcp-server",
+            "owner_avatar_url": "https://avatars.githubusercontent.com/u/1834093?v=4",
+            "primary_language": "TypeScript",
+            "primary_language_color": "#3178c6",
+            "pushed_at": "2025-09-23T12:40:59Z",
+            "stargazer_count": 44,
+            "uses_custom_opengraph_image": false
+          }
+        }
+      }
+    }
+  ]
+}
