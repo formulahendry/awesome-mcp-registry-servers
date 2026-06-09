@@ -300,6 +300,32 @@
         },
         {
             "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+            "name": "Xquik",
+            "description": "Xquik MCP Server exposes X data, monitoring, webhooks, extraction workflows, and account tools.",
+            "status": "active",
+            "repository": {
+                "url": "https://github.com/Xquik-dev/x-twitter-scraper",
+                "source": "github"
+            },
+            "version": "2.4.16",
+            "website_url": "https://docs.xquik.com/mcp/overview",
+            "remotes": [
+                {
+                    "type": "streamable-http",
+                    "url": "https://xquik.com/mcp",
+                    "headers": [
+                        {
+                            "name": "x-api-key",
+                            "description": "Xquik API key",
+                            "is_required": true,
+                            "is_secret": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
             "name": "Awesome Copilot",
             "description": "Awesome Copilot MCP Server helps discover, load, and save GitHub Copilot chat modes, custom instructions, and prompts from the Awesome Copilot repository. Supports searching available customizations and saving selected items into the repository via MCP tools and prompts.",
             "status": "active",
