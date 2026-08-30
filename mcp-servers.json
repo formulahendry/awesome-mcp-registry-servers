@@ -347,6 +347,72 @@
                     "is_latest": true
                 }
             }
+        },
+        {
+            "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+            "name": "SandBase Harness",
+            "description": "MCP bridge for SandBase Harness sessions, sandboxed turns, artifacts, audit, and replay.",
+            "status": "active",
+            "repository": {
+                "url": "https://github.com/sandbaseai/sandbase-harness",
+                "source": "github"
+            },
+            "version": "0.3.8",
+            "packages": [
+                {
+                    "registry_type": "oci",
+                    "registry_base_url": "https://ghcr.io",
+                    "identifier": "ghcr.io/sandbaseai/sandbase-harness-mcp:0.3.8",
+                    "version": "0.3.8",
+                    "transport": {
+                        "type": "stdio"
+                    },
+                    "runtime_hint": "docker",
+                    "runtime_arguments": [
+                        {
+                            "type": "positional",
+                            "value": "run"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "-i"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "--rm"
+                        },
+                        {
+                            "type": "named",
+                            "name": "-e",
+                            "value": "MANAGED_AGENTS_URL"
+                        },
+                        {
+                            "type": "named",
+                            "name": "-e",
+                            "value": "MANAGED_AGENTS_API_KEY"
+                        },
+                        {
+                            "type": "positional",
+                            "value": "ghcr.io/sandbaseai/sandbase-harness-mcp:0.3.8"
+                        }
+                    ],
+                    "environment_variables": [
+                        {
+                            "name": "MANAGED_AGENTS_URL",
+                            "description": "URL of the SandBase Harness runtime API.",
+                            "is_required": true,
+                            "is_secret": false
+                        },
+                        {
+                            "name": "MANAGED_AGENTS_API_KEY",
+                            "description": "API key when the connected Harness runtime requires authentication.",
+                            "is_required": false,
+                            "is_secret": true
+                        }
+                    ]
+                }
+            ],
+            "remotes": []
         }
     ]
 }
