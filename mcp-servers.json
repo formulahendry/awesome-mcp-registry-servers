@@ -347,6 +347,23 @@
                     "is_latest": true
                 }
             }
+        },
+        {
+            "name": "Statsnet",
+            "description": "Background check any company in the world: registration, executives, courts and finances.",
+            "status": "active",
+            "repository": {
+                "url": "https://github.com/usenetstate/statsnet-mcp",
+                "source": "github"
+            },
+            "version": "1.0.1",
+            "remotes": [
+                {
+                    "type": "streamable-http",
+                    "url": "https://statsnet.co/mcp"
+                }
+            ],
+            "websiteUrl": "https://statsnet.co"
         }
     ]
 }
