@@ -347,6 +347,26 @@
                     "is_latest": true
                 }
             }
+        },
+        {
+            "name": "io.github.nuanu-ai/agent-payment-node",
+            "title": "Agent Payment Node",
+            "description": "Local stdio x402 payment tools; Apple Silicon macOS and Node 24 only.",
+            "version": "0.5.76",
+            "repository": {
+                "url": "https://github.com/nuanu-ai/agent-payment-node",
+                "source": "github"
+            },
+            "websiteUrl": "https://github.com/nuanu-ai/agent-payment-node#readme",
+            "_meta": {
+                "io.modelcontextprotocol.registry/publisher-provided": {
+                    "installation": "brew install nuanu-ai/tap/apn",
+                    "launch": "apn mcp serve",
+                    "platform": "Apple Silicon macOS; Node 24",
+                    "license": "MIT",
+                    "notes": "Manual Homebrew installation only. No supported Registry package, remote MCP endpoint, Registry publication ID, audit or verified-publisher claim is supplied. Payment authority and custody limits are documented in the source README."
+                }
+            }
         }
     ]
 }
